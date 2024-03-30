@@ -47,7 +47,7 @@ export class TableDemoComponent implements OnInit {
 
     constructor(
         private customerService: CustomerService,
-        private productService: ProductService,
+        private productService: ProductService
     ) {}
 
     ngOnInit() {
@@ -57,7 +57,7 @@ export class TableDemoComponent implements OnInit {
 
             // @ts-ignore
             this.customers1.forEach(
-                (customer) => (customer.date = new Date(customer.date)),
+                (customer) => (customer.date = new Date(customer.date))
             );
         });
         this.customerService
@@ -132,7 +132,7 @@ export class TableDemoComponent implements OnInit {
             this.products.forEach((product) =>
                 product && product.name
                     ? (this.expandedRows[product.name] = true)
-                    : '',
+                    : ''
             );
         } else {
             this.expandedRows = {};
@@ -150,7 +150,7 @@ export class TableDemoComponent implements OnInit {
     onGlobalFilter(table: Table, event: Event) {
         table.filterGlobal(
             (event.target as HTMLInputElement).value,
-            'contains',
+            'contains'
         );
     }
 
