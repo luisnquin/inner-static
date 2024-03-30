@@ -10,6 +10,6 @@ stdenvNoCC.mkDerivation rec {
 
   installPhase = ''
     mkdir -p $out/var/www/html
-    cp -r ./root/* $out/var/www/html
+    cp -r ./public/* $out/var/www/html
   '';
 }
