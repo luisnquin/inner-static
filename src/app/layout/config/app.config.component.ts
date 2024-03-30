@@ -13,7 +13,7 @@ export class AppConfigComponent {
 
     constructor(
         public layoutService: LayoutService,
-        public menuService: MenuService
+        public menuService: MenuService,
     ) {}
 
     get visible(): boolean {
